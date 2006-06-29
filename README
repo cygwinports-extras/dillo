@@ -1,0 +1,85 @@
+dillo
+-------------------------------------------
+A small, fast web browser for GTK+.
+
+NOTES:
+dpid and the dpi plugins are NOT working; this is a known problem that 
+nobody has seemed to solve yet.  But the browser itself works fine, just 
+don't try to download files or use bookmarks or cookies.
+
+Runtime requirements:
+  cygwin-1.5.20-1
+  glib-1.2.10-3
+  gtk+-1.2.10-2
+  libjpeg62-6b-11
+  libpng12-1.2.8-2
+
+Build requirements:
+(besides corresponding devel packages)
+  cygwin-1.5.20-1
+  autoconf2.5-2.59-2
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  make-3.80-1
+  sed-4.1.5-1
+
+Canonical homepage:
+  http://www.dillo.org/
+
+Canonical download:
+  http://www.dillo.org/download/
+
+-------------------------------------------
+
+Build instructions:
+  unpack dillo-0.8.6-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./dillo-0.8.6-X.cygport all
+
+This will create:
+  /usr/src/dillo-0.8.6-X-src.tar.bz2
+  /usr/src/dillo-0.8.6-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/defaults/etc/dillorc
+  /etc/dpidrc
+  /etc/postinstall/dillo.sh
+  /usr/bin/dillo.exe
+  /usr/bin/dpid.exe
+  /usr/bin/dpidc
+  /usr/lib/dillo/dpi/bookmarks/bookmarks.dpi
+  /usr/lib/dillo/dpi/cookies/cookies.dpi
+  /usr/lib/dillo/dpi/datauri/datauri.filter.dpi
+  /usr/lib/dillo/dpi/downloads/downloads.dpi
+  /usr/lib/dillo/dpi/file/file.dpi
+  /usr/lib/dillo/dpi/ftp/ftp.filter.dpi
+  /usr/lib/dillo/dpi/hello/hello.filter.dpi
+  /usr/lib/dillo/dpi/https/https.filter.dpi
+  /usr/share/doc/Cygwin/dillo-0.8.6.README
+  /usr/share/doc/dillo-0.8.6/AUTHORS
+  /usr/share/doc/dillo-0.8.6/COPYING
+  /usr/share/doc/dillo-0.8.6/ChangeLog
+  /usr/share/doc/dillo-0.8.6/INSTALL
+  /usr/share/doc/dillo-0.8.6/NEWS
+  /usr/share/doc/dillo-0.8.6/README
+
+------------------
+
+Port Notes:
+
+----- version 0.8.6-1 -----
+Version bump.
+
+----- version 0.8.3-1 -----
+Initial release for the Cygwin version of gtk+.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

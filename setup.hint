@@ -1,0 +1,4 @@
+category: Web X11
+requires: cygwin glib gtk+ libjpeg62 libpng12
+sdesc: "GTK+ compact web browser"
+ldesc: "A small, fast web browser for GTK+"
