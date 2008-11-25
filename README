@@ -1,29 +1,31 @@
 dillo
 -------------------------------------------
-A small, fast web browser for GTK+.
+Dillo is a multi-platform graphical web browser known for its speed 
+and small size.
 
 NOTES:
-dpid and the dpi plugins are NOT working; this is a known problem that 
-nobody has seemed to solve yet.  But the browser itself works fine, just 
-don't try to download files or use bookmarks or cookies.
+The bookmarks, cookies, and downloads DPI plugins do not work yet.
 
 Runtime requirements:
-  cygwin-1.5.20-1
-  glib-1.2.10-3
-  gtk+-1.2.10-2
-  libjpeg62-6b-11
-  libpng12-1.2.8-2
+  cygwin-1.5.25-15
+  libfltk2.0-2.0.x.6525-1
+  libgetaddrinfo0-1.6.3-3
+  libiconv2-1.12-1
+  libjpeg62-6b-12
+  libpng12-1.2.33-1
+  openssl-0.9.8i-1
+  wget
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.20-1
-  autoconf2.5-2.59-2
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  make-3.80-1
-  sed-4.1.5-1
+  autoconf2.5-2.63-3
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.dillo.org/
@@ -34,23 +36,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack dillo-0.8.6-X-src.tar.bz2
+  unpack dillo-2.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./dillo-0.8.6-X.cygport all
+  cygport ./dillo-2.0-X.cygport all
 
 This will create:
-  /usr/src/dillo-0.8.6-X-src.tar.bz2
-  /usr/src/dillo-0.8.6-X.tar.bz2
+  /usr/src/dillo-2.0-X-src.tar.bz2
+  /usr/src/dillo-2.0-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
-  /etc/defaults/etc/dillorc
+  /etc/dillorc
   /etc/dpidrc
-  /etc/postinstall/dillo.sh
   /usr/bin/dillo.exe
   /usr/bin/dpid.exe
   /usr/bin/dpidc
@@ -62,17 +63,19 @@ Files included in the binary package:
   /usr/lib/dillo/dpi/ftp/ftp.filter.dpi
   /usr/lib/dillo/dpi/hello/hello.filter.dpi
   /usr/lib/dillo/dpi/https/https.filter.dpi
-  /usr/share/doc/Cygwin/dillo-0.8.6.README
-  /usr/share/doc/dillo-0.8.6/AUTHORS
-  /usr/share/doc/dillo-0.8.6/COPYING
-  /usr/share/doc/dillo-0.8.6/ChangeLog
-  /usr/share/doc/dillo-0.8.6/INSTALL
-  /usr/share/doc/dillo-0.8.6/NEWS
-  /usr/share/doc/dillo-0.8.6/README
+  /usr/share/doc/dillo-2.0/AUTHORS
+  /usr/share/doc/dillo-2.0/COPYING
+  /usr/share/doc/dillo-2.0/ChangeLog
+  /usr/share/doc/dillo-2.0/INSTALL
+  /usr/share/doc/dillo-2.0/NEWS
+  /usr/share/doc/dillo-2.0/README
 
 ------------------
 
 Port Notes:
+
+----- version 2.0-1 -----
+Major version bump.
 
 ----- version 0.8.6-1 -----
 Version bump.

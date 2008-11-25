@@ -1,0 +1,13 @@
+--- origsrc/dillo-2.0/src/dns.h	2007-12-31 15:15:44.000000000 -0600
++++ src/dillo-2.0/src/dns.h	2008-11-25 00:46:08.937061800 -0600
+@@ -2,6 +2,10 @@
+ #define __DNS_H__
+ 
+ #include <netinet/in.h>
++#ifdef __CYGWIN__
++#include <dummyin6.h>
++#include <getaddrinfo.h>
++#endif
+ 
+ #ifdef __cplusplus
+ extern "C" {

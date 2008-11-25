@@ -1,4 +1,5 @@
-category: Web X11
-requires: cygwin glib gtk+ libjpeg62 libpng12
-sdesc: "GTK+ compact web browser"
-ldesc: "A small, fast web browser for GTK+"
+category: Web
+requires: cygwin libfltk2.0 libgetaddrinfo0 libiconv2 libjpeg62 libpng12 openssl wget zlib
+sdesc: "FLTK2 web browser"
+ldesc: "Dillo is a multi-platform graphical web browser known for its 
+speed and small size."

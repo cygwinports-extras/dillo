@@ -1,0 +1,11 @@
+--- origsrc/dillo-2.0/configure.in	2008-10-10 15:37:17.000000000 -0500
++++ src/dillo-2.0/configure.in	2008-11-24 23:16:32.739431800 -0600
+@@ -68,7 +68,7 @@
+ 
+ #include "config.h"
+ 
+-#if HAVE_STDINT_H == 0
++#if HAVE_STDINT_H == 1
+ #include <stdint.h>
+ #else
+ typedef signed $gint16    int16_t;
