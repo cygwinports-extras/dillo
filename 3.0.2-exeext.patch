@@ -1,0 +1,46 @@
+--- origsrc/dillo-3.0.2/dpid/dpid.c	2011-11-08 01:52:46.000000000 -0600
++++ src/dillo-3.0.2/dpid/dpid.c	2012-03-28 01:47:58.914197500 -0500
+@@ -36,6 +36,12 @@
+ 
+ #include "../dpip/dpip.h"
+ 
++#ifdef __CYGWIN__
++#define EXEEXT ".exe"
++#else
++#define EXEEXT ".dpi"
++#endif
++
+ #define QUEUE 5
+ 
+ volatile sig_atomic_t caught_sigchld = 0;
+@@ -148,7 +154,7 @@ enum file_type get_file_type(char *file_
+ {
+    char *dot = strrchr(file_name, '.');
+ 
+-   if (dot && !strcmp(dot, ".dpi"))
++   if (dot && !strcmp(dot, EXEEXT))
+       return DPI_FILE;             /* Any filename ending in ".dpi" */
+    else {
+       MSG_ERR("get_file_type: Unknown file type for %s\n", file_name);
+--- origsrc/dillo-3.0.2/dpid/dpidrc.in	2011-10-27 07:19:20.000000000 -0500
++++ src/dillo-3.0.2/dpid/dpidrc.in	2012-03-28 02:12:08.302097700 -0500
+@@ -1,6 +1,6 @@
+ dpi_dir=@libdir@/dillo/dpi
+ 
+-proto.file=file/file.dpi
+-proto.ftp=ftp/ftp.filter.dpi
+-proto.https=https/https.filter.dpi
+-proto.data=datauri/datauri.filter.dpi
++proto.file=file/file.dpi@EXEEXT@
++proto.ftp=ftp/ftp.filter.dpi@EXEEXT@
++proto.https=https/https.filter.dpi@EXEEXT@
++proto.data=datauri/datauri.filter.dpi@EXEEXT@
+--- origsrc/dillo-3.0.2/dpid/Makefile.am	2011-10-27 07:19:20.000000000 -0500
++++ src/dillo-3.0.2/dpid/Makefile.am	2012-03-28 02:13:05.485368400 -0500
+@@ -31,5 +31,5 @@ sysconf_DATA = dpidrc
+ CLEANFILES = $(sysconf_DATA)
+ 
+ dpidrc: $(srcdir)/dpidrc.in Makefile
+-	sed -e 's|[@]libdir[@]|$(libdir)|' $(srcdir)/dpidrc.in > dpidrc
++	sed -e 's|[@]libdir[@]|$(libdir)|;s|[@]EXEEXT[@]|$(EXEEXT)|g' $(srcdir)/dpidrc.in > dpidrc
+ 
