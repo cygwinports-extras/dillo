@@ -1,5 +1,0 @@
-category: Web
-requires: libfltk1.3 libiconv2 libjpeg8 libpng14 libopenssl100 libstdc++6 libX11_6 wget zlib0
-sdesc: "FLTK web browser"
-ldesc: "Dillo is a multi-platform graphical web browser known for its 
-speed and small size."
