@@ -1,6 +1,6 @@
 NAME="dillo"
-VERSION=3.0.2
-RELEASE=2
+VERSION=3.0.3
+RELEASE=1
 CATEGORY="Web"
 SUMMARY="FLTK-based compact web browser"
 DESCRIPTION="Dillo is a multi-platform graphical web browser known for its
