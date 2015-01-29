@@ -1,5 +1,5 @@
 NAME="dillo"
-VERSION=3.0.3
+VERSION=3.0.4.1
 RELEASE=1
 CATEGORY="Web"
 SUMMARY="FLTK-based compact web browser"
@@ -18,4 +18,6 @@ src_install() {
 	cyginstall
 
 	make_etc_defaults /etc/dillo
+
+	make_desktop_entry dillo Dillo "" "Network;WebBrowser"
 }
